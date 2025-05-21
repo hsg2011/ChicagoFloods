@@ -1,8 +1,4 @@
-# Assignment 4: Interactive Visualization System
 
-**Team Members:** [Ameen Zaita, Harket, Darius Wilson]
-
-**Link to Live Visualization:** (https://ameenzaita.github.io/424-website-/)
 
 **Image of Visual Interface:** ![image](https://github.com/user-attachments/assets/f7cf577a-b19d-4d98-9855-12d0d28d1416)
 - Note: Only displaying 1 graph since the graphs are displayed vertically so the others are not in view
@@ -20,17 +16,6 @@ We focused our analysis on data collected during the period from **January 1, 20
 *   `WindSpeed` (m/s)
 
 Key attributes utilized from the dataset include `measurement_time`, `measurement_type`, `measurement_value`, `units`, `measurement_title` (for sensor-specific handling), `data_stream_id` (for precipitation calculation), `latitude`, and `longitude`.
-
-## Domain Questions Addressed
-
-The primary goal was to leverage interactive visualization to explore key environmental patterns and relationships in Chicago during this transitional period. The visualizations are designed to help answer the following questions:
-
-1.  How do temperature patterns in Chicago evolve during the winter-to-spring transition period? (Addressed by V1, V4)
-2.  How do environmental sensors in Chicago capture spatial variations in temperature? (Addressed by V2)
-3.  What relationships exist between temperature, humidity, and precipitation in Chicago? (Addressed by V3)
-4.  How does soil moisture respond to precipitation events in Chicago? (Addressed by V5)
-5.  How do wind patterns vary across different parts of Chicago, and how do they correlate with temperature? (Addressed by V6)
-6.  How do daily cycles of temperature and humidity change throughout the winter-to-spring transition? (Addressed by V4)
 
 ## Data Transformations and Preprocessing
 
