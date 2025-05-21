@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chicago Environmental Data Visualization - Spring 2017</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chicago Environmental Data Visualization</h1>
+        <p>
+            Exploring temperature, humidity, precipitation, soil moisture, and wind patterns during 
+            the Winter-to-Spring Transition (Jan-Jun 2017).
+        </p>
+    </header>
+
+    <div class="container">
+        <!-- V1 -->
+        <div class="vis-panel">
+            <h2>V1: Monthly Temperature Distribution (Mar-Jun)</h2>
+            <div id="vis-monthly-boxplot" class="chart"></div>
+        </div>
+
+        <!-- V4 -->
+        <div class="vis-panel wide">
+            <h2>V4: Daily Temperature Cycles & Trend</h2>
+            <div id="vis-cycles-trend-linked" class="chart"></div>
+        </div>
+
+        <!-- V2 -->
+        <div class="vis-panel wide">
+            <h2>V2: April Temperature by Neighborhood</h2>
+            <p>Click a neighborhood on the map to see min/mean/max temperature.</p>
+            <div id="vis-choropleth-linked-bars" class="chart"></div>
+        </div>
+
+        <!-- V3 -->
+        <div class="vis-panel wide">
+            <h2>V3: March Temp vs. Humidity Relationship</h2>
+            <p>Brush the top time series to filter points on the scatter plot.</p>
+            <div id="vis-timeseries-scatter-linked" class="chart"></div>
+        </div>
+
+        <!-- V5 -->
+        <div class="vis-panel wide">
+            <h2>V5: Soil Moisture Response to Precipitation</h2>
+            <p>Brush the precipitation bars to focus on soil moisture changes in the selected period.</p>
+            <div id="vis-soil-precip-interactive" class="chart"></div>
+        </div>
+
+        <!-- V5 Part 2 -->
+        <div class="vis-panel">
+            <h2>V5 Part 2: Soil Moisture & Precip Lag Correlation</h2>
+            <div id="vis-soil-precip-lag-correlation" class="chart"></div>
+        </div>
+
+        <!-- V6 -->
+        <div class="vis-panel wide">
+            <h2>V6: Temperature vs. Wind Speed (March)</h2>
+            <p>
+                Daily averages for March. Green points show data, red dashed line shows linear trend.
+            </p>
+            <div id="vis-temp-wind-scatter" class="chart"></div>
+        </div>
+
+        <!-- V7 -->
+        <div class="vis-panel wide">
+            <h2>V7: Slider-Controlled Daily-Avg Facets</h2>
+            <div id="vis-faceted-slider" class="chart"></div>
+        </div>
+
+        <!-- Data and Methods -->
+        <div class="vis-panel full-width">
+            <h2>Data and Methods</h2>
+            <p>
+                This visualization uses environmental sensor data from the City of Chicago 
+                (<a href="https://data.cityofchicago.org/Environmental-Health/Environmental-Sensors-Data/ggws-77ih" target="_blank">Source</a>) 
+                for January through June 2017. Data was cleaned, filtered, and aggregated using Python (Pandas, GeoPandas) 
+                and visualized using Altair (which generates Vega-Lite specifications).
+            </p>
+            <p>
+                Temperature values for certain sensors (MK-III, Cumulus, TM1) were corrected based on observed patterns 
+                and documentation where available (e.g., converting mV readings to Celsius). Outliers and missing values 
+                were handled as described in the accompanying report.
+            </p>
+            <p>
+                Interactive features (selection, brushing) are implemented using Altair's built-in capabilities, 
+                linked across different views.
+            </p>
+            <p>
+                Source code and detailed report available on GitHub (Link to your repo).
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+}
+
+h1, h2 {
+    color: #555;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between visualization panels */
+    justify-content: center; /* Center panels horizontally */
+    max-width: 1200px; /* Max width for the container */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+.vis-panel {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%; /* Flex grow, shrink, basis - allows two panels per row on wider screens */
+    min-width: 300px; /* Minimum width before wrapping */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within the panel */
+}
+
+.vis-panel.wide {
+     flex: 1 1 95%; /* Allows these panels to take up almost the full width */
+}
+
+.vis-panel.full-width {
+    flex: 1 1 100%; /* Forces this panel to take up the full width */
+    text-align: left;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Separator */
+    margin-top: 20px;
+}
+
+.chart {
+    width: 100%; /* Chart will fill its container */
+    /* Specific height will come from Vega-Embed or spec,
+       but you could set a min-height here if needed */
+}
+
+/* Styles to make Vega-Lite tooltips look decent */
+.vg-tooltip-box {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 5px;
+    border-radius: 4px;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.vg-tooltip {
+    margin: 0;
+    padding: 0;
+}
+.vg-tooltip tr {
+    border: none !important; /* Override default table styles */
+}
+.vg-tooltip td {
+    padding: 2px 5px;
+    vertical-align: top;
+}
+.vg-tooltip td:first-child {
+    font-weight: bold;
+}
